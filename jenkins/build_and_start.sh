@@ -4,7 +4,7 @@ user=jenkins
 group=jenkins
 uid=1000
 gid=1000
-groupadd -g ${gid} ${group}     && useradd -d "/var/lib/jenkins" -u ${uid} -g ${gid} -m -s /bin/bash ${user}
+sudo groupadd -g ${gid} ${group} && sudo useradd -d "/var/lib/jenkins" -u ${uid} -g ${gid} -m -s /bin/bash ${user}
 
 echo "Building oss-argus-jenkins Docker container"
 docker build -t oss-argus-jenkins .
