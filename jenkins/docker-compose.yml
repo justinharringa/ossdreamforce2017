@@ -7,4 +7,4 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ~/oss-argus-jenkins:/var/jenkins_home
+      - /var/lib/jenkins:/var/jenkins_home
