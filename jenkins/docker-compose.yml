@@ -1,0 +1,10 @@
+version: '2'
+services:
+  oss-argus-jenkins:
+    image: oss-argus-jenkins
+    environment:
+      - JENKINS_OPTS="--prefix=/jenkins"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ~/oss-argus-jenkins:/var/jenkins_home
