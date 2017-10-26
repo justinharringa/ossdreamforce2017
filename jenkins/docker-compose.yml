@@ -2,6 +2,8 @@ version: '2'
 services:
   oss-argus-jenkins:
     image: oss-argus-jenkins
+    env_file:
+      - .jenkins.env
     environment:
       - JENKINS_OPTS="--prefix=/jenkins"
     ports:
