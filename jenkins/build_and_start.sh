@@ -1,4 +1,6 @@
 #!/bin/bash
+FLAGS=$1
+
 echo "Creating /var/lib/jenkins and adding Jenkins user/group if not already added"
 user=jenkins
 group=jenkins
@@ -11,4 +13,4 @@ sudo chown jenkins:jenkins /var/lib/jenkins
 echo "Building oss-argus-jenkins Docker container"
 docker build -t oss-argus-jenkins .
 echo "Running oss-argus-jenkins"
-docker-compose up -d --force-recreate
+docker-compose up -d ${FLAGS}
